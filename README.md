@@ -201,25 +201,25 @@ MO-IT150_SPI_DataAnalytics_JobPostingAnalysis/
 
 ### Dataset descriptions
 
-- `job_postings_direct_analytics_clean.csv`  
+- [`job_postings_direct_analytics_clean.csv`](data/cleaned/job_postings_direct_analytics_clean.csv)  
   All postings retained after the direct Data Analytics scope screen.
 
-- `job_profiles_direct_analytics_dedup.csv`  
+- [`job_profiles_direct_analytics_dedup.csv`](data/cleaned/job_profiles_direct_analytics_dedup.csv)  
   Deduplicated requirement profiles for aggregate employer-demand analysis.
 
-- `job_postings_entry_level_confirmed.csv`  
+- [`job_postings_entry_level_confirmed.csv`](data/cleaned/job_postings_entry_level_confirmed.csv)  
   Strict subset used for entry-level analysis.
 
-- `skills_direct_analytics_clean.csv`  
+- [`skills_direct_analytics_clean.csv`](data/cleaned/skills_direct_analytics_clean.csv)  
   Long-format normalized skill/tool observations for all retained direct analytics roles.
 
-- `skills_entry_level_confirmed.csv`  
+- [`skills_entry_level_confirmed.csv`](data/cleaned/skills_entry_level_confirmed.csv)  
   Long-format normalized skill/tool observations for the confirmed entry-level subset.
 
-- `role_screening_audit.csv`  
+- [`role_screening_audit.csv`](data/cleaned/role_screening_audit.csv)  
   Complete 276-record audit trail showing inclusion, exclusion, and normalization decisions.
 
-- `role_scope_review_queue.csv`  
+- [`role_scope_review_queue.csv`](data/cleaned/role_scope_review_queue.csv)  
   Small set of roles requiring manual scope confirmation.
 
 - `normalization_summary.csv`  
@@ -259,26 +259,28 @@ The source inventory currently contains **10 HEIs**, of which **8 provide enough
 
 ### HEI source inventory
 
-| Institution | Program | Evidence available | Analytical use |
-|---|---|---|---|
-| Mapúa Malayan Digital College | BSIT, Data Analytics | Strong course and competency detail | Included |
-| University of Santo Tomas | BS Data Science and Analytics | Full curriculum | Included |
-| De La Salle University | BS Data Science | Strong program-outcome and tool evidence | Included |
-| Mapúa University | BS Data Science | Explicit competency evidence; no full curriculum in captured source | Included with limitation |
-| FEU Institute of Technology | BSIT, Business Analytics | Explicit specialization competencies | Included |
-| Nueva Vizcaya State University | BSIS, Business Analytics | Program and specialization competency evidence | Included with limitation |
-| University of Science and Technology of Southern Philippines | BS Data Science | Full curriculum | Included |
-| University of the Immaculate Conception | BSIT, Analytics and Machine Intelligence | Full BSIT prospectus with analytics courses/concentration | Included |
-| University of the Cordilleras | BS Data Analytics | Program offering confirmed; insufficient detailed curriculum | Source inventory only |
-| University of San Carlos | BS Data Science | Program offering confirmed; insufficient detailed curriculum | Source inventory only |
-| CHED CMO No. 25, s. 2015 | National BSCS/BSIS/BSIT framework | National outcomes and minimum/common computing curriculum | Reference framework only |
+| Institution / source | Program / framework | Evidence available | Analytical use | Official source |
+|---|---|---|---|---|
+| Mapúa Malayan Digital College | BSIT, Data Analytics | Strong course and competency detail | Included | [Open source](https://www.mmdc.mcl.edu.ph/college-programs/data-analytics/) |
+| University of Santo Tomas | BS Data Science and Analytics | Full curriculum | Included | [Open source](https://www.ust.edu.ph/academics/programs/bachelor-of-science-in-data-science-and-analytics/) |
+| De La Salle University | BS Data Science | Strong program-outcome and tool evidence | Included | [Open source](https://old.dlsu.edu.ph/colleges/ccs/undergraduate-degree-programs/bsds/) |
+| Mapúa University | BS Data Science | Explicit competency evidence; no full curriculum in captured source | Included with limitation | [Open source](https://www.mapua.edu.ph/pages/academics/undergraduate/makati-campus/school-of-information-technology/bachelor-of-science-in-data-science) |
+| FEU Institute of Technology | BSIT, Business Analytics | Explicit specialization competencies | Included | [Open source](https://feutech.edu.ph/academics/bsitba) |
+| Nueva Vizcaya State University | BSIS, Business Analytics | Program and specialization competency evidence | Included with limitation | [Open source](https://cite.nvsu.edu.ph/academics/degree-programs/bsis) |
+| University of Science and Technology of Southern Philippines | BS Data Science | Full curriculum | Included | [Open source](https://www.ustp.edu.ph/cdeo/citc/bsds/) |
+| University of the Immaculate Conception | BSIT, Analytics and Machine Intelligence | Full BSIT prospectus with analytics courses/concentration | Included | [Open source](https://ccs.uic.edu.ph/academics/program-specifications/bsit-program-specifications) |
+| University of the Cordilleras | BS Data Analytics | Program offering confirmed; insufficient detailed curriculum | Source inventory only | [Open source](https://citcs.uc-bcf.edu.ph/programs/) |
+| University of San Carlos | BS Data Science | Program offering confirmed; insufficient detailed curriculum | Source inventory only | [Open source](https://usc.edu.ph/catholic-educational-institution-academics/undergraduate-programs) |
+| CHED CMO No. 25, s. 2015 | National BSCS/BSIS/BSIT framework | National outcomes and minimum/common computing curriculum | Reference framework only | [Open source](https://legacy.ched.gov.ph/wp-content/uploads/2017/10/CMO-no.-25-s.-2015.pdf) |
+
+The links above point to the official institutional or CHED pages used to build the curriculum evidence inventory. Where only a program offering could be confirmed, the source is retained for transparency but is not used in competency counts.
 
 Official source URLs and detailed evidence are stored in:
 
-- `HEI/hei_source_inventory.csv`
-- `HEI/hei_curriculum_evidence_long.csv`
-- `HEI/hei_core_competency_matrix.csv`
-- `HEI/ched_reference_competencies.csv`
+- [`HEI/hei_source_inventory.csv`](HEI/hei_source_inventory.csv)
+- [`HEI/hei_curriculum_evidence_long.csv`](HEI/hei_curriculum_evidence_long.csv)
+- [`HEI/hei_core_competency_matrix.csv`](HEI/hei_core_competency_matrix.csv)
+- [`HEI/ched_reference_competencies.csv`](HEI/ched_reference_competencies.csv)
 
 ### Core curriculum competency matrix
 
@@ -311,6 +313,21 @@ Because public curriculum detail differs substantially among institutions, the f
 
 The employer-side and curriculum-side datasets will be joined at the normalized competency level, such as data analysis, statistics, database/data management, visualization, reporting, programming, machine learning/predictive analytics, and business intelligence/decision support.
 
+
+## Source links
+
+### Job-posting source
+
+- [SimplifyTrabaho filtered Data & AI candidate pool](https://simplifytrabaho.ycells.com/?level=internship%2Centry&nolevel=1&fn=data)
+
+### Curriculum evidence files
+
+- [HEI source inventory](HEI/hei_source_inventory.csv)
+- [Long-form curriculum evidence](HEI/hei_curriculum_evidence_long.csv)
+- [HEI core competency matrix](HEI/hei_core_competency_matrix.csv)
+- [CHED reference competencies](HEI/ched_reference_competencies.csv)
+
+The HEI source inventory contains the official source URL for every institution reviewed. This keeps the README readable while preserving a direct audit trail to the underlying curriculum/program evidence.
 
 ## Planned analysis in Google Colab
 
